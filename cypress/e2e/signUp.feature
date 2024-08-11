@@ -13,14 +13,14 @@ Feature:Testing SignIn
         And I select how I here about mima "<source>"
         And I fill in the "password"
         And I click the "Sign Up" Button
-    # And I insert the OTP
-    # Then I should see the Preview content
-    #       | Panel        |
-    #       | Customer     |
-    #       | Order        |
-    #       | Payment Link |
-    #       | Paybills     |
-    #       | Stock        |
+        And I insert the OTP
+        Then I should see the Preview content
+            | panel        |
+            | Customer     |
+            | Order        |
+            | Payment Link |
+            | Paybills     |
+            | Stock        |
         Examples:
             | source   |
             | Facebook |
