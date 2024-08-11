@@ -35,9 +35,9 @@ Then(/^I should see the sign Up form page$/,()=>{
 // 	cy.clickNextButton()
 // });
 
-When(/^I select how I here about mima$/, () => {
-	cy.insertAdditionalDetails()
-});
+// When(/^I select how I here about mima$/, () => {
+// 	cy.insertAdditionalDetails()
+// });
 
 // When(/^I fill in the password$/, () => {
 // 	cy.insertPassword()

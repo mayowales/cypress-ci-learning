@@ -40,10 +40,10 @@ Cypress.Commands.add("insertDetails", (field) => {
       cy.insertValues(data.busRegNumField, "RC-101");
       break;
     case "password":
-      cy.get(data.passwordField).click().type("Test@1234");
+      cy.insertValues(data.passwordField).click().type("Test@1234");
        break;
     case "email":
-      cy.get(data.emailField,detail.email);
+      cy.insertValues(data.emailField,detail.email);
     
   }
 });
