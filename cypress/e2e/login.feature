@@ -6,8 +6,8 @@ Feature: Testing Login
         And I fill in the "email"
         And I fill in the "password"
         And I click the "Login" Button
-        Then Ishould see the Preview content
-            | Panel        |
+        Then I should see the Preview content
+            | panel        |
             | Customer     |
             | Order        |
             | Payment Link |
