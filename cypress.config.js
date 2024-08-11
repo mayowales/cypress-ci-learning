@@ -16,8 +16,8 @@ module.exports = defineConfig({
     viewportWidth: 1520,
     watchForFileChanges: false,
     retries:{
-      openMode: 1,
-      runMode: 1
+      openMode: 0,
+      runMode: 0
     },
     specPattern: "**/*.feature",
     setupNodeEvents,

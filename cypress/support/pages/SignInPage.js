@@ -40,10 +40,10 @@ Cypress.Commands.add("insertDetails", (field) => {
       cy.insertValues(data.busRegNumField, "RC-101");
       break;
     case "password":
-      cy.get(data.passwordField).click().type("Test@1234");
+      cy.insertValues(data.passwordField).click().type("Test@1234");
        break;
     case "email":
-      cy.get(data.emailField,detail.email);
+      cy.insertValues(data.emailField,detail.email);
     
   }
 });
@@ -105,7 +105,7 @@ Cypress.Commands.add('insertEmail', ()=>{
        "email": "${emailAddress}"
        }
        `;
-      cy.writeFile("cypress/fixture7login.json", deet);
+      cy.writeFile("cypress/fixtures/login.json", deet);
       cy.insertValues(data.busEmailField, emailAddress);
     })
   );
@@ -118,7 +118,9 @@ Cypress.Commands.add('extractOTP', ()=>{
     const emailBody = email.body
     const parser = new DOMParser()
     const doc = parser.parseFromString(emailBody, 'text/html')
-    const code = doc.querySelector('.main>tbody>tr:nth-child(2) p:nth-chlid(3)').textContent
+    const code = doc.querySelector(
+      ".main>tbody>tr:nth-child(2) p:nth-child(3)"
+    ).textContent;
     const OTP = code.trim()
     cy.insertMultipleData(data.inputField, OTP)
   }))
