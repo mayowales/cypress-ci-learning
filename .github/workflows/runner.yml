@@ -16,4 +16,4 @@ jobs:
         - name: Run Cypress Scripts
           uses: cypress-io/github-action@v6
           env:
-          CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_KEY}}
+            CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_KEY}}
