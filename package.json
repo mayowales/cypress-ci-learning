@@ -23,7 +23,7 @@
     "stepDefinitions": ["cypress/e2e/**/*.{js,ts}"],
      "json":{
     "enabled": true,
-    "output": "cypress/reports/json/"
+    "output": "cypress/reports/json/result.json"
   }
   }
 }
