@@ -3,17 +3,23 @@ name: Run Cypress Test
 on: [push]
 
 env:
-    CYPRESS_KEY: ${{secrets.CYPRESS_MAILSLURP_API_KEY}}
+  CYPRESS_KEY: ${{secrets.CYPRESS_MAILSLURP_API_KEY}}
 
 jobs:
-    test-exec:
-        runs-on: ubuntu-latest
+  test-exec:
+    runs-on: ubuntu-latest
 
-        steps:
-        - name: Setup Node
-          uses: actions/checkout@v4
+    steps:
+      - name: Setup Node
+        uses: actions/checkout@v4
 
-        - name: Run Cypress Scripts
-          uses: cypress-io/github-action@v6
-          env:
-            CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_KEY}}
+      - name: Run Cypress Scripts
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_KEY}}
+
+      - name: Save Result to Repo
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: cypress/reports/html/my-report.html
