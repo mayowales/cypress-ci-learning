@@ -19,7 +19,7 @@ jobs:
             CYPRESS_MAILSLURP_API_KEY: ${{env.CYPRESS_KEY}}
 
         - name: Save Result to Repo
-          uses: action/upload-artifact@v3
+          uses: actions/upload-artifact@v3
           with:
             name: results
             paths: cypress/reports/json/result.json
