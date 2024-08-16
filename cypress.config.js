@@ -9,15 +9,16 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
+  projectId: "vkwa3e",
   e2e: {
     baseUrl: "https://staging.trymima.com/",
     defaultCommandTimeout: 30000,
     viewportHeight: 938,
     viewportWidth: 1520,
     watchForFileChanges: false,
-    retries:{
+    retries: {
       openMode: 0,
-      runMode: 0
+      runMode: 0,
     },
     specPattern: "**/*.feature",
     setupNodeEvents,
